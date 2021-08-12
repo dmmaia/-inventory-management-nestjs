@@ -17,12 +17,12 @@ export class ProductCategoryController {
     return this.productCategoryService.findOne(id);
   }
   @Put(':id')
-  async update(@Param('id') id: string, @Body() createRestricaoEstadoDto:CreateProductCategoryDto) {
-    return await this.productCategoryService.update(id, createRestricaoEstadoDto);
+  async update(@Param('id') id: string, @Body() createProductCategoryDto:CreateProductCategoryDto) {
+    return await this.productCategoryService.update(id, createProductCategoryDto);
   }
   @Post()
-  async create(@Body() createRestricaoEstadoDto:CreateProductCategoryDto){
-    return await this.productCategoryService.create(createRestricaoEstadoDto)
+  async create(@Body() createProductCategoryDto:CreateProductCategoryDto){
+    return await this.productCategoryService.create(createProductCategoryDto)
   }
   @Delete(':id')
   async remove(@Param('id') id: string) {
